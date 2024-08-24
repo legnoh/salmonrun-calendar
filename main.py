@@ -50,7 +50,7 @@ def create_description(weapons:list, all_weapons:dict) -> str:
     description = ""
     for weapon in weapons:
         if weapon["name"] in all_weapons:
-            description += f"# {weapon["name"]}\n{all_weapons[weapon["name"]]}\n\n"
+            description += f"# 編成評価:\nhttps://appmedia.jp/splatoon3/75973100#skd\n\n#ブキ\n\n## {weapon["name"]}\n{all_weapons[weapon["name"]]}\n\n"
     return description.strip()
 
 if __name__ == '__main__':
