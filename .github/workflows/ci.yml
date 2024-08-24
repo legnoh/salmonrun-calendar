@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  pull_request_target:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check Out Repo 
+      uses: actions/checkout@v4
+    - name: Install pipenv
+      run: pipx install pipenv
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+        cache: pipenv
+    - name: Install dependencies
+      run: pipenv install
+    - name: set locale
+      run: |
+        sudo locale-gen ja_JP.UTF-8
+        sudo update-locale LANG=ja_JP.UTF-8
+    - name: Execute
+      run: pipenv run main
+      env:
+        TZ: ${{ secrets.TZ }}
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v3.0
+      with:
+        publish-dir: './dist'
+        production-deploy: false
+        enable-commit-comment: false
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
