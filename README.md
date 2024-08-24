@@ -7,3 +7,4 @@
   - データの取得に以下の2サイトを利用させて頂いています。ありがとうございますmm
     - [Spla3 API - スプラトゥーン3のステージ情報API](https://spla3.yuu26.com/)
     - [Splatoon3 - スプラトゥーン3 攻略＆検証 Wiki*](https://wikiwiki.jp/splatoon3mix/)
+    - [【スプラ3】サーモンランスケジュール・攻略情報まとめ｜随時更新【スプラトゥーン3】 | AppMedia](https://appmedia.jp/splatoon3/75973100#skd) (リンクのみ)
