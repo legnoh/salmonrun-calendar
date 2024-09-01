@@ -64,7 +64,9 @@ if __name__ == '__main__':
 
     for event_data in schedule_data:
 
-        logging.info(f"{event_data['start_time']}~ {event_data["boss"]["name"]}@{event_data['stage']['name']}")
+        summary = "サーモンラン"
+        if event_data["is_big_run"]:
+            summary = "🌊ビッグラン🌊"
 
         # uidを作る
         raw_uid = "{s}{t}".format(s=event_data['stage']['name'],t=event_data['start_time'])
@@ -73,7 +75,7 @@ if __name__ == '__main__':
 
         event = Event()
         event.add('UID', uid)
-        event.add('SUMMARY', "サーモンラン")
+        event.add('SUMMARY', summary)
         event.add('DESCRIPTION', create_description(event_data["weapons"], all_weapons))
         event.add('DTSTART', datetime.datetime.fromisoformat(event_data['start_time']).astimezone(ORIGIN_TZ))
         event.add('DTEND', datetime.datetime.fromisoformat(event_data['end_time']).astimezone(ORIGIN_TZ))
@@ -89,6 +91,7 @@ if __name__ == '__main__':
             event.add('ATTENDEE', attendee)
 
         cal.add_component(event)
+        logging.info(f"{event_data['start_time']}~ {summary} {event_data["boss"]["name"]}@{event_data['stage']['name']}")
     
     logging.info("# Output ics file")
     if not os.path.exists("./dist"):
