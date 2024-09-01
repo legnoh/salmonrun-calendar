@@ -64,6 +64,8 @@ if __name__ == '__main__':
 
     for event_data in schedule_data:
 
+        logging.info(f"{event_data['start_time']}~ {event_data["boss"]["name"]}@{event_data['stage']['name']}")
+
         # uidを作る
         raw_uid = "{s}{t}".format(s=event_data['stage']['name'],t=event_data['start_time'])
         uid_enc = raw_uid.encode('utf-8')
