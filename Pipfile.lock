@@ -131,11 +131,12 @@
         },
         "fake-useragent": {
             "hashes": [
-                "sha256:1f1920129bb10369a3adf271c3cb99ba676d5d2746fbbed770da6fd8feff8213",
-                "sha256:8b547af788ed7ab018c5f13f67f229d9a4e034afe11fcbb3fa28a380eda68dae"
+                "sha256:a48448654991326dd3f7024cfc84a3d5fac0ae29d6d6c554712ad2a04ff326df",
+                "sha256:b81419bd84300b4f95e294bee625d0655647e51993b16727e6f8d1ff09ce9c5a"
             ],
             "index": "pypi",
-            "version": "==2.0.0"
+            "markers": "python_version >= '3.9'",
+            "version": "==2.0.1"
         },
         "icalendar": {
             "hashes": [
@@ -153,6 +154,14 @@
             ],
             "markers": "python_version >= '3.6'",
             "version": "==3.8"
+        },
+        "importlib-resources": {
+            "hashes": [
+                "sha256:980862a1d16c9e147a59603677fa2aa5fd82b87f223b6cb870695bcfce830065",
+                "sha256:ac29d5f956f01d5e4bb63102a5a19957f1b9175e45649977264a1416783bb717"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==6.4.5"
         },
         "python-dateutil": {
             "hashes": [
