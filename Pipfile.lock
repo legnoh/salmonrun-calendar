@@ -131,12 +131,12 @@
         },
         "fake-useragent": {
             "hashes": [
-                "sha256:a48448654991326dd3f7024cfc84a3d5fac0ae29d6d6c554712ad2a04ff326df",
-                "sha256:b81419bd84300b4f95e294bee625d0655647e51993b16727e6f8d1ff09ce9c5a"
+                "sha256:949bead2e19726bb2977a0db6424e03a0935650f56f17b0130f48f201762bfd8",
+                "sha256:ddc57ec795b29331eefdbe07e76f64a320ea197660705717dd294d016802197d"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.9'",
-            "version": "==2.0.1"
+            "version": "==2.0.2"
         },
         "icalendar": {
             "hashes": [
