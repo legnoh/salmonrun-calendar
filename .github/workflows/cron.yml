@@ -28,7 +28,7 @@ jobs:
         sudo update-locale LANG=ja_JP.UTF-8
 
     - name: Execute
-      run: pipenv run main
+      run: uv run main.py
       env:
         TZ: ${{ secrets.TZ }}
 
