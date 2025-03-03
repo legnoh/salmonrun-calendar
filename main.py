@@ -67,8 +67,7 @@ if __name__ == '__main__':
         summary = "🐟サーモンラン"
         if event_data["is_big_run"]:
             summary = "🌊ビッグラン🌊"
-        
-        if "ui_img" in event_data["weapons"][0]["image"]:
+        elif "ui_img" in event_data["weapons"][0]["image"]:
             if "9d7272733ae2f2282938da17d69f13419a935eef42239132a02fcf37d8678f10_0.png" in event_data["weapons"][0]["image"]:
                 summary = "🐻クマフェス🐻"
             else:
