@@ -106,7 +106,7 @@ dependencies = [
 requires-dist = [
     { name = "beautifulsoup4", specifier = ">=4.14.3" },
     { name = "fake-useragent", specifier = ">=2.2.0" },
-    { name = "icalendar", specifier = ">=6.3.2" },
+    { name = "icalendar", specifier = ">=7.0.3" },
     { name = "requests", specifier = ">=2.32.5" },
 ]
 
